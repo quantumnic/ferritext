@@ -1,0 +1,10 @@
+/target
+**/*.rs.bk
+Cargo.lock
+*.so
+*.dylib
+*.dll
+*.ftxt
+__pycache__/
+*.pyc
+.DS_Store
