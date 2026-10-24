@@ -6,7 +6,6 @@
 
 [![CI](https://github.com/quantumnic/ferritext/actions/workflows/ci.yml/badge.svg)](https://github.com/quantumnic/ferritext/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Crates.io](https://img.shields.io/badge/crates.io-v0.1.0-orange)](https://crates.io/crates/ferritext-core)
 
 *A Tesseract alternative under 80MB. Bindings for Python, C++, C#, and Julia.*
 
@@ -122,18 +121,28 @@ println(result)
 
 ## 📦 Installation
 
+ferritext is not published on crates.io or PyPI yet, and releases have no prebuilt binaries. Install from source:
+
 ### Rust
-```bash
-cargo add ferritext-core
+```toml
+[dependencies]
+ferritext-core = { git = "https://github.com/quantumnic/ferritext" }
 ```
 
 ### Python
 ```bash
-pip install ferritext
+git clone https://github.com/quantumnic/ferritext.git
+cd ferritext/ferritext-py
+pip install maturin
+maturin develop --release   # run inside a virtualenv
 ```
 
 ### C++ / C# / Julia
-Download the shared library from [Releases](https://github.com/quantumnic/ferritext/releases) and use the appropriate binding file.
+Build the shared library and use the matching file in `bindings/`:
+```bash
+cargo build --release -p ferritext-ffi
+# -> target/release/libferritext_ffi.{so,dylib} / ferritext_ffi.dll
+```
 
 ## 🏗️ Building from Source
 
@@ -145,14 +154,14 @@ cargo build --release
 
 ### Run Tests
 ```bash
-cargo test --workspace --exclude ferritext-py
+cargo test --workspace --exclude ferritext-py   # Python crate is built via maturin
 ```
 
 ### Python Bindings
 ```bash
 cd ferritext-py
 pip install maturin
-maturin develop
+maturin develop --release   # inside a virtualenv
 ```
 
 ## 📊 Benchmarks
