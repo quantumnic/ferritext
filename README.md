@@ -4,7 +4,7 @@
 
 **Blazing fast, tiny OCR engine in pure Rust.**
 
-[![CI](https://github.com/redbasecap-buiss/ferritext/actions/workflows/ci.yml/badge.svg)](https://github.com/redbasecap-buiss/ferritext/actions/workflows/ci.yml)
+[![CI](https://github.com/quantumnic/ferritext/actions/workflows/ci.yml/badge.svg)](https://github.com/quantumnic/ferritext/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Crates.io](https://img.shields.io/badge/crates.io-v0.1.0-orange)](https://crates.io/crates/ferritext-core)
 
@@ -133,12 +133,12 @@ pip install ferritext
 ```
 
 ### C++ / C# / Julia
-Download the shared library from [Releases](https://github.com/redbasecap-buiss/ferritext/releases) and use the appropriate binding file.
+Download the shared library from [Releases](https://github.com/quantumnic/ferritext/releases) and use the appropriate binding file.
 
 ## 🏗️ Building from Source
 
 ```bash
-git clone https://github.com/redbasecap-buiss/ferritext.git
+git clone https://github.com/quantumnic/ferritext.git
 cd ferritext
 cargo build --release
 ```

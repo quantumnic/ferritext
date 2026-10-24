@@ -10,7 +10,7 @@ resolver = "2"
 version = "0.1.0"
 edition = "2021"
 license = "MIT"
-repository = "https://github.com/redbasecap-buiss/ferritext"
+repository = "https://github.com/quantumnic/ferritext"
 
 [profile.release]
 opt-level = 3

@@ -35,5 +35,5 @@ A training script will be provided in a future release.
 
 Pre-trained models will be available at:
 ```
-https://github.com/redbasecap-buiss/ferritext/releases/download/v0.1.0/latin-base.ftxt
+https://github.com/quantumnic/ferritext/releases/download/v0.1.0/latin-base.ftxt
 ```
